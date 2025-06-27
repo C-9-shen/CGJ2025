@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80708f7ea2551be44b991d3d86d4eaf0, type: 3}
   m_Name: D1S1
   m_EditorClassIdentifier: 
-  ID: 
+  ID: D1S1
   WordContent: "<type=0.1,0.03>\u4F60\u597D\uFF1F\u6709\u4EBA\u5728\u5417\uFF1F"
   WordSize: 16
   AllowFontAutoSize: 0
   BoxSize: {x: -1, y: -1}
-  AutoNextTime: -1
+  AutoNextTime: 2

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2ead32c30adc546a1566523576a122, type: 3}
   m_Name: Dialog1
   m_EditorClassIdentifier: 
-  Dialogs: []
+  Dialogs:
+  - {fileID: 11400000, guid: c2da6a2e3bc54074a94627296592a9bd, type: 2}
+  - {fileID: 11400000, guid: 582ff102669f32d4eac5c7458e4e81fe, type: 2}
