@@ -17,8 +17,10 @@ public struct CharacterStats
 }
 public class MainCharacter : MonoBehaviour
 {
+    private static MainCharacter ins;
+    public static MainCharacter Ins { get { return ins; } }
     [Header("基本组件")]
-    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     //[SerializeField] private Animator animator;
     [SerializeField] protected LayerMask groundLayer;
 
@@ -26,7 +28,7 @@ public class MainCharacter : MonoBehaviour
     [SerializeField] protected CharacterStats stats;
 
     protected bool isFacingRight = true;
-    protected bool isGrounded;
+    public bool isGrounded;
     protected int jumpCount; 
     private float horizontalInput;
     private bool jumpPressed;
@@ -43,6 +45,15 @@ public class MainCharacter : MonoBehaviour
 
     protected  void Awake()
     {
+        if (ins == null)
+        {
+            ins = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         isGrounded = true;
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         //if(animator==null)animator = GetComponent<Animator>();
