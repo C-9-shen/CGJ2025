@@ -21,7 +21,7 @@ public class PlatformController : MonoBehaviour
 
     private int currentWaypointIndex = 0;
     private bool isMoving = false;
-    private bool isFalling = false;
+    public bool isFalling = false;
     public float topThreshold = 0.7f;
     private bool isLifting = false; 
     private Vector3 originalPosition; 
@@ -57,10 +57,20 @@ public class PlatformController : MonoBehaviour
         }
     }
 
+    public void ResetPos()
+    {
+        transform.position = originalPosition;
+        currentWaypointIndex = 0;
+        isFalling = false;
+        isLifting = false;
+        isMoving = false;
+        rb.velocity = Vector2.zero;
+    }
+
     private IEnumerator MovePlatform()
     {
         while (true)
-        {   
+        {
             transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex], moveSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex]) < 0.1f)
             {
@@ -98,10 +108,13 @@ public class PlatformController : MonoBehaviour
                 if (normal.y < -topThreshold)
                 {
                     StepOnPlatform?.Invoke();
-                    if (currentState == PlatformState.Normal) 
+                    
+                    // For both Normal and Lift states, parent the player to the platform
+                    if (currentState == PlatformState.Normal || currentState == PlatformState.Lift)
                     {
                         collision.transform.SetParent(transform);
                     }
+                    
                     if (currentState == PlatformState.Fall)
                     {
                         isFalling = true;
@@ -113,19 +126,20 @@ public class PlatformController : MonoBehaviour
                     }
                 }
             }
-            
         }
     }
+    
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             LeavePlatform?.Invoke();
-            if (currentState == PlatformState.Normal)
+            
+            // For both Normal and Lift states, unparent the player when they leave
+            if (currentState == PlatformState.Normal || currentState == PlatformState.Lift)
             {
                 collision.transform.SetParent(null);
             }
-
         }
     }
     private void StopFalling()

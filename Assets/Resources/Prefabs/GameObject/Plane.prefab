@@ -48,15 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 2
-  waypoints:
-  - {x: -3, y: -1, z: 0}
-  - {x: -3, y: 2, z: 0}
-  - {x: 0, y: 2, z: 0}
-  moveSpeed: 2
-  fallSpeed: 5
-  liftHeight: 3
-  liftSpeed: 2
+  waypoints: []
+  moveSpeed: 160
+  fallSpeed: 400
+  liftHeight: 240
+  liftSpeed: 160
   delayBeforeFall: 2
+  isFalling: 0
   topThreshold: 0.7
   StepOnPlatform:
     m_PersistentCalls:

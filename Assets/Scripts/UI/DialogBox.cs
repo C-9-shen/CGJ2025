@@ -23,13 +23,14 @@ public class DialogBox : MonoBehaviour
     public bool Animating = false;
 
     public float EndTime = -1f;
+    public float StartTime = -1f;
 
     void Update()
     {
         GetInput();
         UpdateAnimator();
         if((!Animating && KeyConfirm) ||
-            (!Animating && Time.time > EndTime && EndTime > 0f)) TextLoad();
+            (!Animating && Time.time > EndTime+StartTime && EndTime > 0f)) TextLoad();
     }
 
     void GetInput()
@@ -77,7 +78,8 @@ public class DialogBox : MonoBehaviour
             Show = false;
             return;
         }
-        EndTime = DialogList.Dialogs[SentenceIndex].AutoNextTime + Time.time;
+        EndTime = DialogList.Dialogs[SentenceIndex].AutoNextTime;
+        StartTime = Time.time;
         foreach (var dialogEvent in DialogEvents)
         {
             if (dialogEvent.DialogIndex == SentenceIndex)

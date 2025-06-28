@@ -88,16 +88,19 @@ public class BoxController : MonoBehaviour
     {
         BoxUp?.Invoke();
         HasBeenHold = true;
+        ifCanBeHold = true;
         transform.SetParent(Player.transform);
         transform.position = new Vector3(Player.transform.position.x+0.5f, Player.transform.position.y, Player.transform.position.z);
+        Debug.Log("ÁÆ±Â≠êË¢´ÊãæËµ∑");
     }
     void PutDownBox() 
     {
         BoxDown?.Invoke();
-        ifCanBeHold = false;
         HasBeenHold = false;
+        ifCanBeHold = false;
         transform.SetParent(null);
         transform.position = new Vector3(Player.transform.position.x + 0.5f, Player.transform.position.y, Player.transform.position.z);
+        Debug.Log("ÁÆ±Â≠êË¢´Êîæ‰∏ã");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -108,7 +111,7 @@ public class BoxController : MonoBehaviour
                 Vector3 normal = contact.normal;
                 if (normal.y < -topThreshold)
                 {
-                    Debug.Log("≤»‘⁄œ‰◊”∂•≤ø");
+                    Debug.Log("Áé©ÂÆ∂Ë∏©Âà∞ÁÆ±Â≠ê");
                     StepOn?.Invoke();
                     collision.gameObject.GetComponent<MainCharacter>().isGrounded = true;
                     switch (currentState)
@@ -136,7 +139,7 @@ public class BoxController : MonoBehaviour
                 else if (Mathf.Abs(normal.y) < sideThreshold)
                 {
                     TouchSide?.Invoke();
-                    Debug.Log("◊≤µΩœ‰◊”≤‡√Ê");
+                    Debug.Log("Áé©ÂÆ∂Êé•Ëß¶ÁÆ±Â≠ê‰æßÈù¢");
                     ifCanBeHold=true;
                     return;
                 }
@@ -149,12 +152,18 @@ public class BoxController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (!HasBeenHold)
+            {
+                ifCanBeHold = false;
+                Debug.Log("Áé©ÂÆ∂Á¶ªÂºÄÁÆ±Â≠êÔºåÊó†Ê≥ïÂÜçÊãæÂèñ");
+            }
+            
             foreach (ContactPoint2D contact in collision.contacts)
             {
                 Vector3 normal = contact.normal;
                 if (normal.y < -topThreshold)
                 {
-                    Debug.Log("¿Îø™œ‰◊”∂•≤ø");
+                    Debug.Log("Á¶ªÂºÄÁÆ±Â≠êÈ°∂ÈÉ®");
                     OnLeaveTop?.Invoke();
                     collision.gameObject.GetComponent<MainCharacter>().isGrounded = false;
                     switch (currentState)
