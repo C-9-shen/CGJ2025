@@ -38,6 +38,10 @@ public class WindowTransparent : MonoBehaviour
     const uint WS_EX_TRANSPARENT = 0x00000020;  // 透明窗口的扩展样式
     static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);  // 窗口插入位置（始终置顶）
     const uint LWA_COLORKEY = 0x00000001;  // 设置颜色键的标志（用于透明度）
+    
+    // Using Magenta color to avoid black being transparent
+    const uint TRANSPARENT_COLOR = 0x00FF00FF; // 洋红色 RGB(255,0,255)
+    
     private IntPtr hWnd;  // Active Window Handle
  
     private void Start()
@@ -53,7 +57,8 @@ public class WindowTransparent : MonoBehaviour
  
         SetWindowLong(hWnd, GWL_EXSTYLE, WS_EX_LAYERED);
  
-        SetLayeredWindowAttributes(hWnd, 0, 0, LWA_COLORKEY);
+        // 使用洋红色作为透明色键，避免黑色被透明化
+        SetLayeredWindowAttributes(hWnd, TRANSPARENT_COLOR, 0, LWA_COLORKEY);
  
         SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
         #endif
