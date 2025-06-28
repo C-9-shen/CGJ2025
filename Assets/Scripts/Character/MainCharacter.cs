@@ -196,9 +196,9 @@ public class MainCharacter : MonoBehaviour
         animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         animator.SetBool("IsGround", isGrounded);
         Debug.Log(rb.velocity);
-        // 只在角色未死亡时处理输入
+        // 只在角色未死亡且输入启用时处理输入
         UpdateGroundCheck();
-        if (!isDead)
+        if (!isDead && GameManager.InputEnabled)
         {
             horizontalInput = Input.GetAxis("Horizontal");
             if (Input.GetKeyDown(KeyCode.Space))
@@ -207,6 +207,12 @@ public class MainCharacter : MonoBehaviour
             }
             Move();
             UpdateGroundCheck();
+        }
+        else if (!GameManager.InputEnabled)
+        {
+            // 输入被禁用时，停止移动
+            horizontalInput = 0;
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
 
