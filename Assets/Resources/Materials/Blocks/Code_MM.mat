@@ -44,10 +44,16 @@ Material:
     - _EdgeWaveIntensity: 2
     - _EnableExternalAlpha: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - _GrayscaleAmount: 0
     - _JellyStrength: 0.1
     - _OutlineWidth: 1
     - _PulseAmount: 0.005
+=======
+    - _JellyStrength: 0.1
+    - _OutlineWidth: 1
+    - _PulseAmount: 0.05
+>>>>>>> Stashed changes
 =======
     - _JellyStrength: 0.1
     - _OutlineWidth: 1
