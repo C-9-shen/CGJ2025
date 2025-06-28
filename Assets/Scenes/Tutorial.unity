@@ -4694,7 +4694,7 @@ MonoBehaviour:
   bufferDistance: 2
   useBuffer: 1
   useBoundary: 1
-  boundaryMin: {x: -8, y: -6.1}
+  boundaryMin: {x: -8, y: -3.89}
   boundaryMax: {x: 116.7, y: 10.29}
   pauseOffset: {x: 0, y: 0, z: 0}
   tempPauseOffset: {x: 0, y: 0, z: 0}
