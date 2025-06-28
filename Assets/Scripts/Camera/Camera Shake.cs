@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CameraShake : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class CameraShake : MonoBehaviour
     [Header("撞击感设置")]
     [SerializeField] private float impactStrength = 2.0f; // 撞击瞬间的强度倍数
     [SerializeField] private float dampingRatio = 0.8f; // 阻尼比例，控制震荡衰减
+    
+    [Header("事件")]
+    public UnityEvent OnShakeStart; // 抖动开始事件
+    public UnityEvent OnShakeEnd; // 抖动结束事件
     
     private Vector3 originalPosition; // 相机原始位置
     private bool isShaking = false; // 是否正在抖动
@@ -28,10 +33,7 @@ public class CameraShake : MonoBehaviour
         }
         
         // 记录原始位置
-        if (cam != null)
-        {
-            originalPosition = cam.transform.localPosition;
-        }
+        
     }
 
     // Update is called once per frame
@@ -51,7 +53,12 @@ public class CameraShake : MonoBehaviour
     {
         if (!isShaking)
         {
+            if (cam != null)
+            {
+                originalPosition = cam.transform.localPosition;
+            }
             StartCoroutine(ShakeCamera());
+            
         }
     }
     
@@ -74,6 +81,7 @@ public class CameraShake : MonoBehaviour
     private IEnumerator ShakeCamera(float duration = -1, float intensity = -1)
     {
         isShaking = true;
+        OnShakeStart?.Invoke(); // 触发抖动开始事件
         
         // 使用默认值或传入的值
         float currentDuration = duration > 0 ? duration : shakeDuration;
@@ -126,6 +134,7 @@ public class CameraShake : MonoBehaviour
         }
         
         isShaking = false;
+        OnShakeEnd?.Invoke(); // 触发抖动结束事件
     }
     
     /// <summary>
@@ -147,5 +156,6 @@ public class CameraShake : MonoBehaviour
     {
         StopAllCoroutines();
         ResetPosition();
+        OnShakeEnd?.Invoke(); // 强制停止时也触发结束事件
     }
 }
