@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Code_MM
+  m_Name: Code_MMG
   m_Shader: {fileID: 4800000, guid: 16e74c61e4f8add40bff37f0b1cb0b17, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -41,9 +41,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0.5
     - _EdgeWaveIntensity: 2
     - _EnableExternalAlpha: 0
-    - _GrayscaleAmount: 0
+    - _GrayscaleAmount: 1
     - _JellyStrength: 0.1
     - _OutlineWidth: 1
     - _PulseAmount: 0.005

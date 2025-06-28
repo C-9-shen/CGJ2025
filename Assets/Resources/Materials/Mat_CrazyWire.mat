@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Code_MM
-  m_Shader: {fileID: 4800000, guid: 16e74c61e4f8add40bff37f0b1cb0b17, type: 3}
+  m_Name: Mat_CrazyWire
+  m_Shader: {fileID: 4800000, guid: c7d2763dcc15c314a9513f3c8570775a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -41,20 +41,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeWaveIntensity: 2
+    - _Brightness: 3
+    - _Chaos: 1.5
+    - _Density: 20
     - _EnableExternalAlpha: 0
-    - _GrayscaleAmount: 0
-    - _JellyStrength: 0.1
-    - _OutlineWidth: 1
-    - _PulseAmount: 0.005
-    - _PulseSpeed: 2
-    - _ScrollSpeed: 0.4
-    - _WaveFrequency: 10
-    - _WaveSpeed: 5
+    - _Speed: 0.003
+    - _TrailLength: 0.3
     m_Colors:
+    - _BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
