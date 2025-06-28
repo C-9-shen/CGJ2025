@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetCanvas: {fileID: 749572009}
   DialogList: {fileID: 11400000, guid: c6b9cbfa52fa8844285582478a8dcee8, type: 2}
-  ShowHeight: 0
+  ShowHeight: 200
   DialogEvents: []
 --- !u!4 &173587033
 Transform:

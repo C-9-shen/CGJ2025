@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     [Header("Target Settings")]
     public Transform target; // 目标物体
+    public Transform targetParent; // 目标的父级Transform（可选）
     public List<GameObject> followObjects = new List<GameObject>(); // 跟随的GameObject列表
     
     [Header("Follow Settings")]
@@ -129,7 +130,11 @@ public class CameraFollow : MonoBehaviour
         if (useBoundary)
         {
             // 使用目标的localPosition计算边界
-            Vector3 targetLocalPos = target.localPosition;
+            Vector3 targetLocalPos;
+            if(targetParent != null) {
+                targetLocalPos = targetParent.InverseTransformPoint(target.position);
+            }
+            else targetLocalPos = target.localPosition;
             
             // 检查目标是否在边界内
             bool targetInBoundsX = targetLocalPos.x >= boundaryMin.x && targetLocalPos.x <= boundaryMax.x;
