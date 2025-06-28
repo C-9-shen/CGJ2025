@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80708f7ea2551be44b991d3d86d4eaf0, type: 3}
+  m_Name: DD_T_BFI 2
+  m_EditorClassIdentifier: 
+  ID: 
+  WordContent: "<type=0.1,0.03>\u9EC4\u8272\u65D7\u5E1C\u4EE3\u8868\u7EC8\u70B9\u3002\u5230\u8FBE\u9EC4\u8272\u65D7\u5E1C\u5904\u4EE5\u7ED3\u675F\u6559\u7A0B"
+  WordSize: 16
+  AllowFontAutoSize: 0
+  BoxSize: {x: -1, y: -1}
+  AutoNextTime: 3
