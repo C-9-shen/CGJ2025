@@ -41,7 +41,11 @@ public class SetCharacterDead : MonoBehaviour
                 {
                     if (deadEvent.EventIndex != -1)
                     {
-                        deadEvent.TriggerEvent.Invoke();
+                        if (deadEvent.TriggerOnce == false || deadEvent.Triggered == false)
+                        {
+                            deadEvent.Triggered = true;
+                            deadEvent.TriggerEvent.Invoke();
+                        }
                     }
                 }
             }
@@ -53,5 +57,7 @@ public class SetCharacterDead : MonoBehaviour
 public class DeadEvent
 {
     public int EventIndex = -1;
+    public bool TriggerOnce = false;
+    public bool Triggered = false;
     public UnityEvent TriggerEvent = new UnityEvent();
 }
