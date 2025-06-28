@@ -36,6 +36,12 @@ public class CameraFollow : MonoBehaviour
     private Vector3 desiredPosition;
     private bool isInitialized = false;
     public Vector3 pauseOffset = Vector3.zero; // 暂停时的偏移量
+    public bool _StopWithOutBias = false; // 暂停但不记录
+    public bool StopWithOutBias
+    {
+        get => _StopWithOutBias;
+        set {_StopWithOutBias = value;}
+    }
     public Vector3 tempPauseOffset = Vector3.zero; // 临时暂停偏移量
     public Vector3 pauseBasePosition = Vector3.zero; // 暂停时的基准位置
     private bool wasPaused = false; // 上一帧是否处于暂停状态
@@ -62,7 +68,7 @@ public class CameraFollow : MonoBehaviour
         }
         
         // 检查暂停状态变化
-        if (pauseFollow && !wasPaused)
+        if ((pauseFollow||StopWithOutBias) && !wasPaused)
         {
             // 刚进入暂停状态，记录基准位置
             if (followObjects.Count > 0)
@@ -71,13 +77,13 @@ public class CameraFollow : MonoBehaviour
             }
         }
 
-        if(!pauseFollow && wasPaused){
-            pauseOffset += tempPauseOffset; // 恢复暂停时的偏移量
+        if(!(pauseFollow||StopWithOutBias) && wasPaused){
+            if(!StopWithOutBias)pauseOffset += tempPauseOffset; // 恢复暂停时的偏移量
             tempPauseOffset = Vector3.zero; // 清除临时偏移量
         }
         
         // 如果暂停跟随，计算当前位置相对于基准位置的偏移
-        if (pauseFollow)
+        if (pauseFollow||StopWithOutBias)
         {
             if (followObjects.Count > 0)
             {
