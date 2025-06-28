@@ -46,7 +46,7 @@ Material:
     - _Density: 0.1
     - _EnableExternalAlpha: 0
     - _Speed: 0.1
-    - _TrailLength: 0
+    - _TrailLength: 0.3
     m_Colors:
     - _BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
