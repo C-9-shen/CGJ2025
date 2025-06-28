@@ -45,10 +45,10 @@ Material:
     - _EnableExternalAlpha: 0
     - _GrayscaleAmount: 1
     - _JellyStrength: 0
-    - _OutlineWidth: 1
+    - _OutlineWidth: 0.2
     - _PulseAmount: 0
     - _PulseSpeed: 0.1
-    - _ScrollSpeed: 0.4
+    - _ScrollSpeed: 0
     - _WaveFrequency: 0.1
     - _WaveSpeed: 0.1
     m_Colors:
