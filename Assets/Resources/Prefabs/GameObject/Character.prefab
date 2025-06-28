@@ -176,8 +176,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   stats:
-    moveSpeed: 400
-    jumpForce: 2400
+    moveSpeed: 600
+    jumpForce: 1900
     maxJumps: 1
     gravityScale: 800
   isGrounded: 0
