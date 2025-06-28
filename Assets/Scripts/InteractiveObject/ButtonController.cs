@@ -1,4 +1,6 @@
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum SwitchState
 {
@@ -11,9 +13,10 @@ public class ButtonController : MonoBehaviour
 {
     public DoorController targetObject;
     public SwitchState currentState = SwitchState.OpenOnContact; 
-    public float autoCloseDelay = 5f; 
+    public float autoCloseDelay = 5f;
+    public bool CanBeTouch=false;
 
-    private bool isOpen = false; 
+    public UnityEvent ButtonCut;
     private float timer = 0f;
 
     void Start()
@@ -26,34 +29,49 @@ public class ButtonController : MonoBehaviour
 
     void Update()
     {
-        switch (currentState)
+        if (CanBeTouch) 
         {
-            case SwitchState.OpenOnContact:
-                if (isOpen)
+            if (Input.GetKeyDown(KeyCode.E)) 
+            {
+                switch (currentState)
                 {
-                    targetObject.isOpen = true;
-                }
-                else { targetObject.isOpen = false; }
-                break;
-            case SwitchState.OpenThenClose:
-                if (isOpen)
-                {
-                    timer += Time.deltaTime;
-                    if (timer >= autoCloseDelay)
-                    {
-                        targetObject.isOpen = false;
-                        isOpen = false;
+                    case SwitchState.OpenOnContact:
+                        ButtonCut.Invoke();
+                        break;
+                    case SwitchState.OpenThenClose:
+                        targetObject.isOpen = true;
                         timer = 0f;
+                        break;
+                    case SwitchState.AutoOpen:
+                        // No action needed for AutoOpen state
+                        break;
+                }
+            }
+        }
+        if (targetObject.currentState == DoorState.Idle)
+        {
+            switch (currentState)
+            {
+                case SwitchState.OpenOnContact:
+                    break;
+                case SwitchState.OpenThenClose:
+                    if (targetObject.isOpen)
+                    {
+                        timer += Time.deltaTime;
+                        if (timer >= autoCloseDelay)
+                        {
+                            targetObject.isOpen = false;
+                            timer = 0f;
+                        }
                     }
-                }
-                break;
-            case SwitchState.AutoOpen:
-                if (!isOpen)
-                {
-                    targetObject.isOpen = true;
-                    isOpen = true;
-                }
-                break;
+                    break;
+                case SwitchState.AutoOpen:
+                    if (!targetObject.isOpen)
+                    {
+                        targetObject.isOpen = true;
+                    }
+                    break;
+            }
         }
     }
 
@@ -61,29 +79,7 @@ public class ButtonController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            switch (currentState)
-            {
-                case SwitchState.OpenOnContact:
-                    if (isOpen == false)
-                    {
-                        targetObject.isOpen = true;
-                        isOpen = true;
-                    }
-                    else 
-                    {
-                        targetObject.isOpen = false;
-                        isOpen = false;
-                    }
-                        break;
-                case SwitchState.OpenThenClose:
-                    targetObject.isOpen = true;
-                    isOpen = true;
-                    timer = 0f;
-                    break;
-                case SwitchState.AutoOpen:
-                    // No action needed for AutoOpen state
-                    break;
-            }
+            CanBeTouch = true;
         }
     }
 }

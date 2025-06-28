@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum FlagState
 {
@@ -9,6 +10,7 @@ public enum FlagState
 
 public class FlagController : MonoBehaviour
 {
+    public UnityEvent TouchFlag;
     [SerializeField] public float activeRange = 5f;
     [SerializeField] public float moveSpeed;
     [SerializeField] public GameObject player;
@@ -88,7 +90,7 @@ public class FlagController : MonoBehaviour
             isTounched = true;
             DisableComponents();
             Debug.Log("Player has reached the flag. Game Over.");
-            // 可以在这里调用游戏胜利的逻辑
+            TouchFlag.Invoke();
         }
     }
     private void DisableComponents()

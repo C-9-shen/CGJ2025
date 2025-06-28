@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 public enum BoxState
 {
     Movable, 
@@ -9,6 +10,8 @@ public enum BoxState
 
 public class BoxController : MonoBehaviour
 {
+    public UnityEvent BoxUp;
+    public UnityEvent BoxDown;
     public BoxState currentState = BoxState.Movable; 
     public float riseHeight; 
     public float riseDuration; 
@@ -80,12 +83,14 @@ public class BoxController : MonoBehaviour
     }
     void PickUpBox() 
     {
+        BoxUp.Invoke();
         HasBeenHold = true;
         transform.SetParent(Player.transform);
         transform.position = new Vector3(Player.transform.position.x+0.5f, Player.transform.position.y, Player.transform.position.z);
     }
     void PutDownBox() 
     {
+        BoxDown.Invoke();
         ifCanBeHold = false;
         HasBeenHold = false;
         transform.SetParent(null);
