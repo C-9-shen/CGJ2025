@@ -1736,6 +1736,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3265018583316912565, guid: 2d7ac4725761b384297dce3a0e8f6a69, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5298106138134119738, guid: 2d7ac4725761b384297dce3a0e8f6a69, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
