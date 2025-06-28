@@ -22,7 +22,7 @@ public class MainCharacter : MonoBehaviour
     public static MainCharacter Ins { get { return ins; } }
     [Header("�������")]
     [SerializeField] public Rigidbody2D rb;
-    //[SerializeField] private Animator animator;
+    [SerializeField] private Animator animator;
     [SerializeField] protected LayerMask groundLayer;
 
     [Header("��ɫ����")]
@@ -67,7 +67,10 @@ public class MainCharacter : MonoBehaviour
         }
         isGrounded = true;
         if (rb == null) rb = GetComponent<Rigidbody2D>();
-        //if(animator==null)animator = GetComponent<Animator>();
+        if(animator==null)animator = GetComponent<Animator>();
+        animator.SetFloat("SpeedY",rb.velocity.y);
+        animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("IsGround", isGrounded);
         ApplyStats();
     }
 
@@ -189,6 +192,10 @@ public class MainCharacter : MonoBehaviour
     }
     protected void Update()
     {
+        animator.SetFloat("SpeedY", rb.velocity.y);
+        animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        animator.SetBool("IsGround", isGrounded);
+        Debug.Log(rb.velocity);
         // 只在角色未死亡时处理输入
         UpdateGroundCheck();
         if (!isDead)

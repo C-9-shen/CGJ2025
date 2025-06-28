@@ -29,6 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21, y: 0.21, z: 1}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1259083926550044010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9194178318187699952
 SpriteRenderer:
@@ -126,8 +128,9 @@ GameObject:
   - component: {fileID: 7093737708865626764}
   - component: {fileID: 2307425860061968328}
   - component: {fileID: 6678136901301233146}
+  - component: {fileID: 329880559717885638}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,18 +236,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21543128ef26df4b95dd3145a761d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 2307425860061968328}
+  animator: {fileID: 329880559717885638}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
   stats:
-    moveSpeed: 600
-    jumpForce: 1900
+    moveSpeed: 5
+    jumpForce: 16
     maxJumps: 1
-    gravityScale: 800
+    gravityScale: 2
   groundCheckDistance: 0.2
   groundCheckOffset: {x: 0, y: 0}
   groundCheckWidth: 0.8
   raycastCount: 3
   isGrounded: 0
+--- !u!95 &329880559717885638
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709390067092033279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4903c5f39df2c4d4e9167685b50ee57f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

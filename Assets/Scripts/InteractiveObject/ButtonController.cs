@@ -14,29 +14,9 @@ public class ButtonController : MonoBehaviour
     public DoorController targetObject;
     public SwitchState currentState = SwitchState.OpenOnContact; 
     public float autoCloseDelay = 5f;
-
-    bool _isOpen= false;
-    public bool isOpen
-    {
-        get { return _isOpen; }
-        set
-        {
-            _isOpen = value;
-            if (value)
-            {
-                ButtonOpen?.Invoke();
-            }
-            else
-            {
-                ButtonClose?.Invoke();
-            }
-        }
-    }
-
     public bool CanBeTouch=false;
 
-    public UnityEvent ButtonOpen;
-    public UnityEvent ButtonClose;
+    public UnityEvent ButtonCut;
     private float timer = 0f;
 
     void Start()
@@ -56,20 +36,18 @@ public class ButtonController : MonoBehaviour
                 switch (currentState)
                 {
                     case SwitchState.OpenOnContact:
-                        isOpen = !isOpen;
+                        ButtonCut.Invoke();
                         break;
                     case SwitchState.OpenThenClose:
-                        if (targetObject != null)targetObject.isOpen = true;
-                        isOpen = true;
+                        ButtonCut.Invoke();
                         timer = 0f;
                         break;
                     case SwitchState.AutoOpen:
-                        // No action needed for AutoOpen state
                         break;
                 }
             }
         }
-        if (targetObject != null && targetObject.currentState == DoorState.Idle)
+        if (targetObject.currentState == DoorState.Idle)
         {
             switch (currentState)
             {
@@ -81,8 +59,7 @@ public class ButtonController : MonoBehaviour
                         timer += Time.deltaTime;
                         if (timer >= autoCloseDelay)
                         {
-                            isOpen = false;
-                            targetObject.isOpen = false;
+                            ButtonCut.Invoke();
                             timer = 0f;
                         }
                     }
@@ -90,20 +67,9 @@ public class ButtonController : MonoBehaviour
                 case SwitchState.AutoOpen:
                     if (!targetObject.isOpen)
                     {
-                        targetObject.isOpen = true;
+                        ButtonCut.Invoke();
                     }
                     break;
-            }
-        }else{
-            if(currentState == SwitchState.OpenThenClose){
-                if(isOpen){
-                    timer += Time.deltaTime;
-                    if (timer >= autoCloseDelay)
-                    {
-                        isOpen = false;
-                        timer = 0f;
-                    }
-                }
             }
         }
     }
@@ -113,14 +79,6 @@ public class ButtonController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             CanBeTouch = true;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            CanBeTouch = false;
         }
     }
 }
