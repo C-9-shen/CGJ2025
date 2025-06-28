@@ -3440,6 +3440,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 6678136901301233146, guid: 87081845b7f350e43a47eb9c12f7fe39, type: 3}
+      propertyPath: groundCheckWidth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678136901301233146, guid: 87081845b7f350e43a47eb9c12f7fe39, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678136901301233146, guid: 87081845b7f350e43a47eb9c12f7fe39, type: 3}
+      propertyPath: groundCheckDistance
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -29,8 +29,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.21, y: 0.21, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1259083926550044010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9194178318187699952
 SpriteRenderer:
@@ -245,4 +243,8 @@ MonoBehaviour:
     jumpForce: 1900
     maxJumps: 1
     gravityScale: 800
+  groundCheckDistance: 0.2
+  groundCheckOffset: {x: 0, y: 0}
+  groundCheckWidth: 0.8
+  raycastCount: 3
   isGrounded: 0
