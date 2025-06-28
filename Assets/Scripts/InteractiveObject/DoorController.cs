@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum DoorState
 {
@@ -26,6 +27,9 @@ public class DoorController : MonoBehaviour
     private float jumpStartTime;
     private float returnStartTime;
     private float tolerance = 0.05f;
+
+    public UnityEvent OnDoorOpen;
+    public UnityEvent OnDoorClose;
 
     void Start()
     {
@@ -158,11 +162,37 @@ public class DoorController : MonoBehaviour
     {
         currentState = state;
     }
+    
     public void ToggleDoor()
     {
-        if (currentState == DoorState.Idle)
+
+        isOpen = !isOpen;
+        
+        // Invoke the appropriate event based on door state
+        if (isOpen)
         {
-            isOpen = !isOpen;
+            if (OnDoorOpen != null)
+                OnDoorOpen?.Invoke();
+        }
+        else
+        {
+            if (OnDoorClose != null)
+                OnDoorClose?.Invoke();
+        }
+        
+    }
+
+    public void SetDoor(bool open){
+        isOpen = open;
+        if (isOpen)
+        {
+            if (OnDoorOpen != null)
+                OnDoorOpen?.Invoke();
+        }
+        else
+        {
+            if (OnDoorClose != null)
+                OnDoorClose?.Invoke();
         }
     }
 }

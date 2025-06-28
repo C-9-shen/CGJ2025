@@ -12,6 +12,9 @@ public class BoxController : MonoBehaviour
 {
     public UnityEvent BoxUp;
     public UnityEvent BoxDown;
+    public UnityEvent StepOn;
+    public UnityEvent TouchSide;
+    public UnityEvent OnLeaveTop;
     public BoxState currentState = BoxState.Movable; 
     public float riseHeight; 
     public float riseDuration; 
@@ -83,14 +86,14 @@ public class BoxController : MonoBehaviour
     }
     void PickUpBox() 
     {
-        BoxUp.Invoke();
+        BoxUp?.Invoke();
         HasBeenHold = true;
         transform.SetParent(Player.transform);
         transform.position = new Vector3(Player.transform.position.x+0.5f, Player.transform.position.y, Player.transform.position.z);
     }
     void PutDownBox() 
     {
-        BoxDown.Invoke();
+        BoxDown?.Invoke();
         ifCanBeHold = false;
         HasBeenHold = false;
         transform.SetParent(null);
@@ -106,6 +109,7 @@ public class BoxController : MonoBehaviour
                 if (normal.y < -topThreshold)
                 {
                     Debug.Log("踩在箱子顶部");
+                    StepOn?.Invoke();
                     collision.gameObject.GetComponent<MainCharacter>().isGrounded = true;
                     switch (currentState)
                     {
@@ -131,6 +135,7 @@ public class BoxController : MonoBehaviour
                 }
                 else if (Mathf.Abs(normal.y) < sideThreshold)
                 {
+                    TouchSide?.Invoke();
                     Debug.Log("撞到箱子侧面");
                     ifCanBeHold=true;
                     return;
@@ -150,6 +155,7 @@ public class BoxController : MonoBehaviour
                 if (normal.y < -topThreshold)
                 {
                     Debug.Log("离开箱子顶部");
+                    OnLeaveTop?.Invoke();
                     collision.gameObject.GetComponent<MainCharacter>().isGrounded = false;
                     switch (currentState)
                     {

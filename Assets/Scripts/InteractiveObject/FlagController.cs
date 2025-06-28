@@ -90,7 +90,7 @@ public class FlagController : MonoBehaviour
             isTounched = true;
             DisableComponents();
             Debug.Log("Player has reached the flag. Game Over.");
-            TouchFlag.Invoke();
+            TouchFlag?.Invoke();
         }
     }
     private void DisableComponents()

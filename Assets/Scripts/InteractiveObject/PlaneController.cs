@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public enum PlatformState
 {
@@ -25,6 +26,10 @@ public class PlatformController : MonoBehaviour
     private bool isLifting = false; 
     private Vector3 originalPosition; 
     private Rigidbody2D rb; 
+
+    public UnityEvent StepOnPlatform;
+    public UnityEvent LeavePlatform;
+
 
     void Start()
     {
@@ -92,6 +97,7 @@ public class PlatformController : MonoBehaviour
                 Vector3 normal = contact.normal;
                 if (normal.y < -topThreshold)
                 {
+                    StepOnPlatform?.Invoke();
                     if (currentState == PlatformState.Normal) 
                     {
                         collision.transform.SetParent(transform);
@@ -114,6 +120,7 @@ public class PlatformController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            LeavePlatform?.Invoke();
             if (currentState == PlatformState.Normal)
             {
                 collision.transform.SetParent(null);
