@@ -89,11 +89,11 @@ public class BoxController : MonoBehaviour
         BoxUp?.Invoke();
         HasBeenHold = true;
         ifCanBeHold = true;
-        GetComponent<Rigidbody2D>().simulated = false; // ½ûÓÃ¸ÕÌåÒÔ·ÀÖ¹ÎïÀí¸ÉÈÅ
+        GetComponent<Rigidbody2D>().simulated = false; // ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½Ô·ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         transform.SetParent(Player.transform);
         transform.position = new Vector3(Player.transform.position.x+0.5f, Player.transform.position.y, Player.transform.position.z);
 
-        Debug.Log("ç®±å­è¢?æ‹¾èµ·");
+        Debug.Log("ç®±å­ï¿½?æ‹¾èµ·");
     }
     void PutDownBox() 
     {
@@ -101,9 +101,9 @@ public class BoxController : MonoBehaviour
         HasBeenHold = false;
         ifCanBeHold = false;
         transform.SetParent(null);
-        GetComponent<Rigidbody2D>().simulated = true; // ÖØĞÂÆôÓÃÎïÀíÄ£Äâ
+        GetComponent<Rigidbody2D>().simulated = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
         transform.position = new Vector3(Player.transform.position.x + 0.5f, Player.transform.position.y, Player.transform.position.z);
-        Debug.Log("ç®±å­è¢?æ”¾ä¸‹");
+        Debug.Log("ç®±å­ï¿½?æ”¾ä¸‹");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -114,7 +114,7 @@ public class BoxController : MonoBehaviour
                 Vector3 normal = contact.normal;
                 if (normal.y < -topThreshold)
                 {
-                    Debug.Log("ç©å?¶è¸©åˆ°ç?±å­");
+                    Debug.Log("ç©ï¿½?ï¿½è¸©åˆ°ï¿½?ï¿½å­");
                     StepOn?.Invoke();
                     collision.gameObject.GetComponent<MainCharacter>().isGrounded = true;
                     switch (currentState)
@@ -142,7 +142,7 @@ public class BoxController : MonoBehaviour
                 else if (Mathf.Abs(normal.y) < sideThreshold)
                 {
                     TouchSide?.Invoke();
-                    Debug.Log("ç©å?¶æ¥è§¦ç?±å­ä¾§é¢");
+                    Debug.Log("ç©ï¿½?ï¿½æ¥è§¦ï¿½?ï¿½å­ä¾§é¢");
                     ifCanBeHold=true;
                     return;
                 }
@@ -158,7 +158,7 @@ public class BoxController : MonoBehaviour
             if (!HasBeenHold)
             {
                 ifCanBeHold = false;
-                Debug.Log("ç©å?¶ç?»å¼€ç®±å­ï¼Œæ— æ³•å†æ‹¾å–");
+                Debug.Log("ç©ï¿½?ï¿½ï¿½?ï¿½å¼€ç®±å­ï¼Œæ— æ³•å†æ‹¾å–");
             }
             
             foreach (ContactPoint2D contact in collision.contacts)
