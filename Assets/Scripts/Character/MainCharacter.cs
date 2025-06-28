@@ -28,6 +28,12 @@ public class MainCharacter : MonoBehaviour
     [Header("��ɫ����")]
     [SerializeField] protected CharacterStats stats;
 
+    [Header("地面检测")]
+    [SerializeField] protected float groundCheckDistance = 0.2f; // 射线检测距离
+    [SerializeField] protected Vector2 groundCheckOffset = Vector2.zero; // 检测点偏移
+    [SerializeField] protected float groundCheckWidth = 0.8f; // 检测宽度
+    [SerializeField] protected int raycastCount = 3; // 射线数量
+
     protected bool isFacingRight = true;
     public bool isGrounded;
     protected int jumpCount;
@@ -115,11 +121,38 @@ public class MainCharacter : MonoBehaviour
 
     protected void UpdateGroundCheck()
     {
+        // 使用射线检测地面
+        isGrounded = CheckGroundWithRaycast();
+        
         if (isGrounded && rb.velocity.y <= 0)
         {
             jumpCount = stats.maxJumps;
         }
     }
+    
+    protected bool CheckGroundWithRaycast()
+    {
+        Vector2 startPos = (Vector2)transform.position + groundCheckOffset;
+        
+        // 多条射线检测，覆盖角色宽度
+        for (int i = 0; i < raycastCount; i++)
+        {
+            float t = raycastCount > 1 ? (float)i / (raycastCount - 1) : 0.5f;
+            Vector2 raycastPos = startPos + Vector2.left * groundCheckWidth * 0.5f + Vector2.right * groundCheckWidth * t;
+            
+            RaycastHit2D hit = Physics2D.Raycast(raycastPos, Vector2.down, groundCheckDistance, groundLayer);
+            
+            if (hit.collider != null)
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    // 移除碰撞检测方法
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -134,6 +167,8 @@ public class MainCharacter : MonoBehaviour
             isGrounded = false;
         }
     }
+    */
+    
     public void ResetJumpCount()
     {
         jumpCount = stats.maxJumps;
@@ -155,6 +190,7 @@ public class MainCharacter : MonoBehaviour
     protected void Update()
     {
         // 只在角色未死亡时处理输入
+        UpdateGroundCheck();
         if (!isDead)
         {
             horizontalInput = Input.GetAxis("Horizontal");
@@ -230,6 +266,31 @@ public class MainCharacter : MonoBehaviour
     {
         RespawnPos = pos; // 直接赋值Transform引用，而不是尝试访问null的position
         Debug.Log($"Respawn position set to: {pos.position}"); // 调试信息
+    }
+    
+    // 可视化调试射线
+    private void OnDrawGizmosSelected()
+    {
+        if (Application.isPlaying)
+        {
+            Vector2 startPos = (Vector2)transform.position + groundCheckOffset;
+            
+            // 绘制检测射线
+            Gizmos.color = isGrounded ? Color.green : Color.red;
+            for (int i = 0; i < raycastCount; i++)
+            {
+                float t = raycastCount > 1 ? (float)i / (raycastCount - 1) : 0.5f;
+                Vector2 raycastPos = startPos + Vector2.left * groundCheckWidth * 0.5f + Vector2.right * groundCheckWidth * t;
+                
+                Gizmos.DrawRay(raycastPos, Vector2.down * groundCheckDistance);
+            }
+            
+            // 绘制检测范围
+            Gizmos.color = Color.yellow;
+            Vector2 leftPoint = startPos + Vector2.left * groundCheckWidth * 0.5f;
+            Vector2 rightPoint = startPos + Vector2.right * groundCheckWidth * 0.5f;
+            Gizmos.DrawLine(leftPoint, rightPoint);
+        }
     }
     
     // 调试方法：追踪位置变化
