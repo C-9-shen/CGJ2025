@@ -157,10 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
+
   m_Sprite: {fileID: 21300000, guid: 24a2763f18dd08f428f65d4447323e05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -272,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< Updated upstream
+
   m_IsActive: 0
 --- !u!4 &9039245408379400010
 Transform:
@@ -666,8 +663,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-=======
->>>>>>> Stashed changes
   m_Sprite: {fileID: 21300000, guid: 24a2763f18dd08f428f65d4447323e05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -779,8 +774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-=======
->>>>>>> Stashed changes
+
   m_IsActive: 1
 --- !u!4 &9039245408379400010
 Transform:
@@ -1130,15 +1124,10 @@ Transform:
   - {fileID: 8337986776666674663}
   - {fileID: 6572365816760453828}
   - {fileID: 9039245408379400010}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
   - {fileID: 22282590900110057}
   - {fileID: 2316561723838164945}
   - {fileID: 8517523253173352396}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Father: {fileID: 5298106138134119738}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8523214645727553962
