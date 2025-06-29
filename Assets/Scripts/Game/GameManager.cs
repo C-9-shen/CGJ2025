@@ -27,6 +27,16 @@ public class GameManager : MonoBehaviour
 
     // 全局输入控制状态
     public static bool InputEnabled { get; private set; } = true;
+    
+    /// <summary>
+    /// 设置全局输入启用状态
+    /// </summary>
+    /// <param name="enabled">是否启用输入</param>
+    public static void SetInputEnabled(bool enabled)
+    {
+        InputEnabled = enabled;
+        Debug.Log($"全局输入状态设置为: {enabled}");
+    }
 
     void Start()
     {
