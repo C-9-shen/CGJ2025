@@ -15,7 +15,7 @@ public class ButtonController : MonoBehaviour
     public SwitchState currentState = SwitchState.OpenOnContact; 
     public float autoCloseDelay = 5f;
 
-    bool _isOpen= false;
+    public bool _isOpen= false;
     public bool isOpen
     {
         get { return _isOpen; }
