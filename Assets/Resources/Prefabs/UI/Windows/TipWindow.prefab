@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 7712097172825853341}
   - component: {fileID: 5175521953387131269}
   - component: {fileID: 8919132919347704418}
-  - component: {fileID: 3212751615532371100}
   m_Layer: 0
   m_Name: TipWindow
   m_TagString: Untagged
@@ -211,27 +210,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &3212751615532371100
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3033392543189765866}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2263bf6b5482a7f40bfd5b92c7872726, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3442402858819975191
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Code_MNS
-  m_Shader: {fileID: 4800000, guid: 16e74c61e4f8add40bff37f0b1cb0b17, type: 3}
+  m_Name: Mat_CodeRain 1
+  m_Shader: {fileID: 4800000, guid: c7d2763dcc15c314a9513f3c8570775a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 10, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 0}
@@ -41,20 +41,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeWaveIntensity: 0
+    - _Brightness: 0.6
+    - _Chaos: 0
+    - _Density: 0.1
     - _EnableExternalAlpha: 0
-    - _GrayscaleAmount: 0
-    - _JellyStrength: 0
-    - _OutlineWidth: 0.2
-    - _PulseAmount: 0
-    - _PulseSpeed: 0.1
-    - _ScrollSpeed: 0.1
-    - _WaveFrequency: 0.1
-    - _WaveSpeed: 0.1
+    - _Speed: 0.01
+    - _TrailLength: 0
     m_Colors:
+    - _BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

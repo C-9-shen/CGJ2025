@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Code_MNS
+  m_Name: Code_MNF
   m_Shader: {fileID: 4800000, guid: 16e74c61e4f8add40bff37f0b1cb0b17, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -43,12 +43,11 @@ Material:
     m_Floats:
     - _EdgeWaveIntensity: 0
     - _EnableExternalAlpha: 0
-    - _GrayscaleAmount: 0
     - _JellyStrength: 0
-    - _OutlineWidth: 0.2
+    - _OutlineWidth: 1
     - _PulseAmount: 0
     - _PulseSpeed: 0.1
-    - _ScrollSpeed: 0.1
+    - _ScrollSpeed: 0.4
     - _WaveFrequency: 0.1
     - _WaveSpeed: 0.1
     m_Colors:
