@@ -42,7 +42,9 @@ public class ShowDialog : MonoBehaviour
         dialogBox.SentenceIndex = 0;
         dialogBox.DialogList = DialogList;
         dialogBox.DialogEvents = DialogEvents;
+        if(dialogBox.Showing) dialogBox.TextLoad();
         dialogBox.Show = true;
+        
 
         RectTransform rectTransform = _instance.GetComponent<RectTransform>();
         rectTransform.SetParent(TargetCanvas.transform, false);

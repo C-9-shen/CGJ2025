@@ -20,6 +20,7 @@ public class DialogBox : MonoBehaviour
 
     private bool _show = false;
     public bool Show = false;
+    public bool Showing = false;
     public bool Animating = false;
 
     public float EndTime = -1f;
@@ -46,9 +47,11 @@ public class DialogBox : MonoBehaviour
         {
             _show = Show;
             Animating = true;
+            if(!Show) Showing = false;
         }
         if (TransistionAnimator != null)
         {
+
             TransistionAnimator.SetBool("Show", Show);
         }
     }
@@ -59,6 +62,7 @@ public class DialogBox : MonoBehaviour
         if (Show)
         {
             TextLoad();
+            Showing = true;
         }
         else
         {
@@ -70,7 +74,7 @@ public class DialogBox : MonoBehaviour
         }
     }
 
-    void TextLoad()
+    public void TextLoad()
     {
         if (TargetText == null || DialogList == null) return;
         if(SentenceIndex >= DialogList.Dialogs.Count)
