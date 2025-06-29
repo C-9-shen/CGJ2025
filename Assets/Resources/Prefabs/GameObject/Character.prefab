@@ -250,6 +250,10 @@ MonoBehaviour:
   groundCheckOffset: {x: 0, y: 0}
   groundCheckWidth: 40
   raycastCount: 3
+  sideCheckDistance: 46
+  sideCheckOffset: {x: 0, y: 15}
+  sideCheckHeight: 0.8
+  sideRaycastCount: 3
   isGrounded: 0
 --- !u!95 &3517770135062436248
 Animator:
