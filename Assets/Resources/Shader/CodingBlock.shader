@@ -134,23 +134,24 @@ Shader "Unlit/CodingBlock"
                 float3 offset = float3(
                     wave1 + noiseX + centeredUV.x * bounce,
                     wave2 + noiseY + centeredUV.y * bounce,
-                    edgeWave
+                    0 // 移除Z轴偏移，避免影响图层顺序
                 );
                 
-                // 限制最大偏移量，防止超出边界
-                float maxOffset = 0.1; // 最大偏移量（世界空间单位）
-                offset = clamp(offset, -maxOffset, maxOffset);
+                // 限制最大偏移量，防止超出边界，且不影响Z轴
+                float maxOffset = 0.05; // 减小最大偏移量
+                offset.xy = clamp(offset.xy, -maxOffset, maxOffset);
+                offset.z = 0; // 确保Z轴不受影响
                 
-                // 应用偏移
-                localPos += offset;
+                // 应用偏移（只在XY平面）
+                localPos.xy += offset.xy;
                 
                 // 转换到裁剪空间
                 o.vertex = UnityObjectToClipPos(float4(localPos, 1.0));
                 o.originalUV = v.uv;
                 
                 // 存储果冻强度因子，用于片段着色器中的动态描边
-                o.jellyFactor = 1.0 + (abs(wave1) + abs(wave2) + abs(edgeWave)) * 0.5; // 减小变化幅度
-                
+                o.jellyFactor = 1.0 + (abs(wave1) + abs(wave2)) * 0.5; // 移除edgeWave因为没有Z轴偏移
+
                 // 获取对象的缩放信息
                 float3 worldScale = float3(
                     length(unity_ObjectToWorld._m00_m10_m20),

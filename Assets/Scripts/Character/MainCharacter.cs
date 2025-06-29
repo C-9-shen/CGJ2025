@@ -34,8 +34,16 @@ public class MainCharacter : MonoBehaviour
     [SerializeField] protected float groundCheckWidth = 0.8f; // 检测宽度
     [SerializeField] protected int raycastCount = 3; // 射线数量
 
+    [Header("侧面检测")]
+    [SerializeField] protected float sideCheckDistance = 0.1f; // 侧面检测距离
+    [SerializeField] protected Vector2 sideCheckOffset = Vector2.zero; // 侧面检测偏移
+    [SerializeField] protected float sideCheckHeight = 0.8f; // 侧面检测高度
+    [SerializeField] protected int sideRaycastCount = 3; // 侧面射线数量
+
     protected bool isFacingRight = true;
     public bool isGrounded;
+    protected bool isBlockedLeft = false; // 左侧是否被阻挡
+    protected bool isBlockedRight = false; // 右侧是否被阻挡
     protected int jumpCount;
     private float horizontalInput;
     private bool jumpPressed;
@@ -87,9 +95,26 @@ public class MainCharacter : MonoBehaviour
         // 如果角色死亡，不处理移动
         if (isDead) return;
         
-        rb.velocity = new Vector2(horizontalInput * stats.moveSpeed, rb.velocity.y);
+        // 检测侧面阻挡
+        UpdateSideCheck();
+        
+        // 根据侧面检测结果限制输入
+        float processedInput = horizontalInput;
+        
+        // 如果向左移动但左侧被阻挡，禁用左方向输入
+        if (processedInput < 0 && isBlockedLeft)
+        {
+            processedInput = 0;
+        }
+        // 如果向右移动但右侧被阻挡，禁用右方向输入
+        else if (processedInput > 0 && isBlockedRight)
+        {
+            processedInput = 0;
+        }
+        
+        rb.velocity = new Vector2(Mathf.Pow(processedInput, 3) * stats.moveSpeed, rb.velocity.y);
 
-        // Զתɫ
+        // 转向角色
         if (Mathf.Abs(horizontalInput) > 0.01f)
         {
             bool shouldFaceRight = horizontalInput > 0;
@@ -125,7 +150,7 @@ public class MainCharacter : MonoBehaviour
     protected void UpdateGroundCheck()
     {
         // 使用射线检测地面
-        isGrounded = CheckGroundWithRaycast();
+        isGrounded = CheckSideWithRaycast(Vector2.down,groundCheckOffset);
         
         if (isGrounded && rb.velocity.y <= 0)
         {
@@ -133,17 +158,26 @@ public class MainCharacter : MonoBehaviour
         }
     }
     
-    protected bool CheckGroundWithRaycast()
+    protected void UpdateSideCheck()
     {
-        Vector2 startPos = (Vector2)transform.position + groundCheckOffset;
+        // 检测左侧
+        isBlockedLeft = CheckSideWithRaycast(Vector2.left,sideCheckOffset);
         
-        // 多条射线检测，覆盖角色宽度
-        for (int i = 0; i < raycastCount; i++)
+        // 检测右侧
+        isBlockedRight = CheckSideWithRaycast(Vector2.right,sideCheckOffset);
+    }
+    
+    protected bool CheckSideWithRaycast(Vector2 direction,Vector2 Offset)
+    {
+        Vector2 startPos = (Vector2)transform.position + Offset;
+        
+        // 多条射线检测，覆盖角色高度
+        for (int i = 0; i < sideRaycastCount; i++)
         {
-            float t = raycastCount > 1 ? (float)i / (raycastCount - 1) : 0.5f;
-            Vector2 raycastPos = startPos + Vector2.left * groundCheckWidth * 0.5f + Vector2.right * groundCheckWidth * t;
+            float t = sideRaycastCount > 1 ? (float)i / (sideRaycastCount - 1) : 0.5f;
+            Vector2 raycastPos = startPos + Vector2.down * sideCheckHeight * 0.5f + Vector2.up * sideCheckHeight * t;
             
-            RaycastHit2D hit = Physics2D.Raycast(raycastPos, Vector2.down, groundCheckDistance, groundLayer);
+            RaycastHit2D hit = Physics2D.Raycast(raycastPos, direction, sideCheckDistance, groundLayer);
             
             if (hit.collider != null)
             {
@@ -195,9 +229,12 @@ public class MainCharacter : MonoBehaviour
         animator.SetFloat("SpeedY", rb.velocity.y);
         animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         animator.SetBool("IsGround", isGrounded);
-        // Debug.Log(rb.velocity);
-        // 只在角色未死亡且输入启用时处理输入
+        
+        // 更新检测
         UpdateGroundCheck();
+        UpdateSideCheck();
+        
+        // 只在角色未死亡且输入启用时处理输入
         if (!isDead && GameManager.InputEnabled)
         {
             horizontalInput = Input.GetAxis("Horizontal");
@@ -206,7 +243,6 @@ public class MainCharacter : MonoBehaviour
                 Jump();
             }
             Move();
-            UpdateGroundCheck();
         }
         else if (!GameManager.InputEnabled)
         {
@@ -288,7 +324,7 @@ public class MainCharacter : MonoBehaviour
         {
             Vector2 startPos = (Vector2)transform.position + groundCheckOffset;
             
-            // 绘制检测射线
+            // 绘制地面检测射线
             Gizmos.color = isGrounded ? Color.green : Color.red;
             for (int i = 0; i < raycastCount; i++)
             {
@@ -298,11 +334,38 @@ public class MainCharacter : MonoBehaviour
                 Gizmos.DrawRay(raycastPos, Vector2.down * groundCheckDistance);
             }
             
-            // 绘制检测范围
+            // 绘制地面检测范围
             Gizmos.color = Color.yellow;
             Vector2 leftPoint = startPos + Vector2.left * groundCheckWidth * 0.5f;
             Vector2 rightPoint = startPos + Vector2.right * groundCheckWidth * 0.5f;
             Gizmos.DrawLine(leftPoint, rightPoint);
+            
+            // 绘制侧面检测射线
+            Vector2 sideStartPos = (Vector2)transform.position + sideCheckOffset;
+            
+            // 左侧检测
+            Gizmos.color = isBlockedLeft ? Color.red : Color.blue;
+            for (int i = 0; i < sideRaycastCount; i++)
+            {
+                float t = sideRaycastCount > 1 ? (float)i / (sideRaycastCount - 1) : 0.5f;
+                Vector2 raycastPos = sideStartPos + Vector2.down * sideCheckHeight * 0.5f + Vector2.up * sideCheckHeight * t;
+                Gizmos.DrawRay(raycastPos, Vector2.left * sideCheckDistance);
+            }
+            
+            // 右侧检测
+            Gizmos.color = isBlockedRight ? Color.red : Color.blue;
+            for (int i = 0; i < sideRaycastCount; i++)
+            {
+                float t = sideRaycastCount > 1 ? (float)i / (sideRaycastCount - 1) : 0.5f;
+                Vector2 raycastPos = sideStartPos + Vector2.down * sideCheckHeight * 0.5f + Vector2.up * sideCheckHeight * t;
+                Gizmos.DrawRay(raycastPos, Vector2.right * sideCheckDistance);
+            }
+            
+            // 绘制侧面检测范围
+            Gizmos.color = Color.cyan;
+            Vector2 topPoint = sideStartPos + Vector2.up * sideCheckHeight * 0.5f;
+            Vector2 bottomPoint = sideStartPos + Vector2.down * sideCheckHeight * 0.5f;
+            Gizmos.DrawLine(topPoint, bottomPoint);
         }
     }
     
