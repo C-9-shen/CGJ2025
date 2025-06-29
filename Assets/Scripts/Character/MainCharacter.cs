@@ -195,7 +195,7 @@ public class MainCharacter : MonoBehaviour
         animator.SetFloat("SpeedY", rb.velocity.y);
         animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         animator.SetBool("IsGround", isGrounded);
-        Debug.Log(rb.velocity);
+        // Debug.Log(rb.velocity);
         // 只在角色未死亡且输入启用时处理输入
         UpdateGroundCheck();
         if (!isDead && GameManager.InputEnabled)
