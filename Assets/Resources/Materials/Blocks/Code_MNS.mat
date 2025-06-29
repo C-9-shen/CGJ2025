@@ -45,7 +45,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _GrayscaleAmount: 0
     - _JellyStrength: 0
-    - _OutlineWidth: 0.2
+    - _OutlineWidth: 2
     - _PulseAmount: 0
     - _PulseSpeed: 0.1
     - _ScrollSpeed: 0.1
