@@ -43,8 +43,9 @@ Material:
     m_Floats:
     - _EdgeWaveIntensity: 1.5
     - _EnableExternalAlpha: 0
+    - _GrayscaleAmount: 0
     - _JellyStrength: 0.1
-    - _OutlineWidth: 1
+    - _OutlineWidth: 50
     - _PulseAmount: 0.05
     - _PulseSpeed: 1
     - _ScrollSpeed: 0.1
