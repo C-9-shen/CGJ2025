@@ -9655,7 +9655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232195881027600874, guid: 82e192863b5ad3a47ba00eeb48e7b1be, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7784
+      value: 2.987712
       objectReference: {fileID: 0}
     - target: {fileID: 4232195881027600874, guid: 82e192863b5ad3a47ba00eeb48e7b1be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9913,11 +9913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384679732207882519, guid: 03d20dcdee44f4f4793d233291bac9ad, type: 3}
       propertyPath: m_Size.x
-      value: 10.590993
+      value: 10.873161
       objectReference: {fileID: 0}
     - target: {fileID: 5384679732207882519, guid: 03d20dcdee44f4f4793d233291bac9ad, type: 3}
       propertyPath: m_Offset.x
-      value: -0.29549646
+      value: -0.43658066
       objectReference: {fileID: 0}
     - target: {fileID: 5481590709206852524, guid: 03d20dcdee44f4f4793d233291bac9ad, type: 3}
       propertyPath: m_Layer
@@ -13078,7 +13078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144251007684872682, guid: 57cbc651b7bba7d43ac1fe05a4cf3451, type: 3}
       propertyPath: delayBeforeReset
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6105968565827971873, guid: 57cbc651b7bba7d43ac1fe05a4cf3451, type: 3}
       propertyPath: m_Name

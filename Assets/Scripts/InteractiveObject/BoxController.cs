@@ -64,10 +64,10 @@ public class BoxController : MonoBehaviour
             }
             else
             {
+                Player.transform.SetParent(null);
                 transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight, transform.position.z);
                 isRising = false;
             }
-            Debug.Log(transform.position);
         }
 
         /*if (currentState == BoxState.RiseOnStep && isFalling)
