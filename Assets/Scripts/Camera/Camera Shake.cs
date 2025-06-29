@@ -14,6 +14,11 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private float impactStrength = 2.0f; // 撞击瞬间的强度倍数
     [SerializeField] private float dampingRatio = 0.8f; // 阻尼比例，控制震荡衰减
     
+    [Header("音效设置")]
+    [SerializeField] private AudioClip shakeAudioClip; // 抖动音效
+    [SerializeField] [Range(0f, 1f)] private float audioVolume = 1.0f; // 音效音量
+    [SerializeField] private bool playAudioOnShake = true; // 是否在抖动时播放音效
+    
     [Header("事件")]
     public UnityEvent OnShakeStart; // 抖动开始事件
     public UnityEvent OnShakeEnd; // 抖动结束事件
@@ -21,6 +26,7 @@ public class CameraShake : MonoBehaviour
     private Vector3 originalPosition; // 相机原始位置
     private bool isShaking = false; // 是否正在抖动
     private Camera cam; // 相机组件引用
+    private AudioSource audioSource; // 音频源组件
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +37,17 @@ public class CameraShake : MonoBehaviour
         {
             cam = Camera.main;
         }
+        
+        // 获取或添加AudioSource组件
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
+        // 配置AudioSource
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
         
         // 记录原始位置
         
@@ -57,6 +74,10 @@ public class CameraShake : MonoBehaviour
             {
                 originalPosition = cam.transform.localPosition;
             }
+            
+            // 播放音效
+            PlayShakeAudio();
+            
             StartCoroutine(ShakeCamera());
             
         }
@@ -71,8 +92,51 @@ public class CameraShake : MonoBehaviour
     {
         if (!isShaking)
         {
+            // 播放音效
+            PlayShakeAudio();
+            
             StartCoroutine(ShakeCamera(duration, intensity));
         }
+    }
+    
+    /// <summary>
+    /// 播放抖动音效
+    /// </summary>
+    private void PlayShakeAudio()
+    {
+        if (playAudioOnShake && shakeAudioClip != null && audioSource != null)
+        {
+            audioSource.clip = shakeAudioClip;
+            audioSource.volume = audioVolume;
+            audioSource.Play();
+        }
+    }
+    
+    /// <summary>
+    /// 设置抖动音效
+    /// </summary>
+    /// <param name="audioClip">音效片段</param>
+    public void SetShakeAudio(AudioClip audioClip)
+    {
+        shakeAudioClip = audioClip;
+    }
+    
+    /// <summary>
+    /// 设置音效音量
+    /// </summary>
+    /// <param name="volume">音量 (0-1)</param>
+    public void SetAudioVolume(float volume)
+    {
+        audioVolume = Mathf.Clamp01(volume);
+    }
+    
+    /// <summary>
+    /// 设置是否播放音效
+    /// </summary>
+    /// <param name="play">是否播放</param>
+    public void SetPlayAudioOnShake(bool play)
+    {
+        playAudioOnShake = play;
     }
     
     /// <summary>

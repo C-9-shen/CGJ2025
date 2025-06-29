@@ -11601,6 +11601,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8815708545292503543, guid: 45dffd4f2bd8d16428953ce224f38bd5, type: 3}
+      propertyPath: shakeAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fef72e83302e9594d92a8a7b3eeebfad, type: 3}
+    - target: {fileID: 8815708545292503543, guid: 45dffd4f2bd8d16428953ce224f38bd5, type: 3}
       propertyPath: shakeIntensity
       value: 100
       objectReference: {fileID: 0}
