@@ -48,6 +48,7 @@ public class DoorController : MonoBehaviour
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
             isPlayerInRange = distance <= activeRange;
+
             if (isOpen && currentState == DoorState.Idle)
             {
                 GetComponent<Collider2D>().enabled = false;
@@ -122,7 +123,7 @@ public class DoorController : MonoBehaviour
         }
         else
         {
-            // È·ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ß¶ï¿½
+            // È·±£ÃÅµ½´ïÄ¿±ê¸ß¶È
             transform.position = new Vector3(transform.position.x, initialPosition.y + jumpHeight, transform.position.z);
             isJumping = false;
         }
@@ -142,16 +143,16 @@ public class DoorController : MonoBehaviour
             float deltaY = -returnSpeed * Time.deltaTime;
             transform.position += new Vector3(0, deltaY, 0);
 
-            // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ó½ï¿½ï¿½ï¿½Ê¼Î»ï¿½ï¿½
+            // ¼ì²éÊÇ·ñ½Ó½ü³õÊ¼Î»ÖÃ
             if (Mathf.Abs(transform.position.y - initialPosition.y) < tolerance)
             {
-                transform.position = initialPosition; // È·ï¿½ï¿½ï¿½Å»Øµï¿½ï¿½ï¿½Ê¼Î»ï¿½ï¿½
+                transform.position = initialPosition; // È·±£ÃÅ»Øµ½³õÊ¼Î»ÖÃ
                 isReturning = false;
             }
         }
         else
         {
-            // È·ï¿½ï¿½ï¿½Å»Øµï¿½ï¿½ï¿½Ê¼Î»ï¿½ï¿½
+            // È·±£ÃÅ»Øµ½³õÊ¼Î»ÖÃ
             transform.position = initialPosition;
             isReturning = false;
         }

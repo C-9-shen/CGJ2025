@@ -146,7 +146,6 @@ public class PlatformController : MonoBehaviour
     {
         isFalling = false;
         rb.velocity = Vector2.zero;
-        transform.position = originalPosition;
     }
 
     public void ChangeState(PlatformState newState)

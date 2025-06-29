@@ -41,9 +41,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 0.9
-    - _Chaos: 0
-    - _Density: 0.1
+    - _Brightness: 3
+    - _Chaos: 1.5
+    - _Density: 20
     - _EnableExternalAlpha: 0
     - _Speed: 0.003
     - _TrailLength: 0.3

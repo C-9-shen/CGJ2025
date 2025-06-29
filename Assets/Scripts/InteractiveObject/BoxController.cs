@@ -15,22 +15,22 @@ public class BoxController : MonoBehaviour
     public UnityEvent StepOn;
     public UnityEvent TouchSide;
     public UnityEvent OnLeaveTop;
-    public BoxState currentState = BoxState.Movable;
-    public float riseHeight;
-    public float riseDuration;
-    public GameObject spikesPrefab;
+    public BoxState currentState = BoxState.Movable; 
+    public float riseHeight; 
+    public float riseDuration; 
+    public GameObject spikesPrefab; 
     public Vector3 spikesSpawnPoint;
     private GameObject spikesInstance;
-    private Rigidbody2D rb;
-    public bool isRising = false;
+    private Rigidbody2D rb; 
+    private bool isRising = false;
     //private bool isFalling = false;
     private float riseStartTime;
     //private float fallStartTime;
     private bool hasSpikes = false;
     public float topThreshold = 0.7f;
     public float sideThreshold = 0.5f;
-    public bool ifCanBeHold = false;
-    public bool HasBeenHold = false;
+    public bool ifCanBeHold=false;
+    public bool HasBeenHold=false;
     public float delayBeforeReset = 2f;
     public Vector3 InitialPosition;
     public GameObject Player;
@@ -40,7 +40,7 @@ public class BoxController : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         InitialPosition = transform.position;
-        spikesSpawnPoint = new Vector3(InitialPosition.x, InitialPosition.y + 0.5f, InitialPosition.z);
+        spikesSpawnPoint = new Vector3(InitialPosition.x,InitialPosition.y+0.5f,InitialPosition.z);
     }
 
     void Update()
@@ -52,7 +52,7 @@ public class BoxController : MonoBehaviour
                 if (!HasBeenHold) { PickUpBox(); }
                 else { PutDownBox(); }
             }
-
+            
         }
         if (currentState == BoxState.RiseOnStep && isRising)
         {
@@ -60,16 +60,15 @@ public class BoxController : MonoBehaviour
             if (elapsedTime < riseDuration)
             {
                 float fractionComplete = elapsedTime / riseDuration;
-                transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight * fractionComplete, transform.position.z);
+                transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight*fractionComplete, transform.position.z);
             }
             else
             {
                 transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight, transform.position.z);
                 isRising = false;
             }
-            Debug.Log(transform.position);
         }
-
+        
         /*if (currentState == BoxState.RiseOnStep && isFalling)
         {
             float elapsedTime = Time.time - fallStartTime;
@@ -85,18 +84,18 @@ public class BoxController : MonoBehaviour
             }
         }*/
     }
-    void PickUpBox()
+    void PickUpBox() 
     {
         BoxUp?.Invoke();
         HasBeenHold = true;
         ifCanBeHold = true;
         GetComponent<Rigidbody2D>().simulated = false; // ���ø����Է�ֹ��������
         transform.SetParent(Player.transform);
-        transform.position = new Vector3(Player.transform.position.x + 0.5f, Player.transform.position.y, Player.transform.position.z);
+        transform.position = new Vector3(Player.transform.position.x+0.5f, Player.transform.position.y, Player.transform.position.z);
 
         Debug.Log("箱子�?拾起");
     }
-    void PutDownBox()
+    void PutDownBox() 
     {
         BoxDown?.Invoke();
         HasBeenHold = false;
@@ -125,19 +124,16 @@ public class BoxController : MonoBehaviour
                         case BoxState.SpikesOnStep:
                             if (!hasSpikes)
                             {
-                                spikesInstance = Instantiate(spikesPrefab, transform);
-                                spikesInstance.transform.localPosition = new Vector3(0, 1, 0);
-                                spikesInstance.transform.localScale = Vector3.one;
+                                spikesSpawnPoint = new Vector3(transform.position.x,transform.position.y+0.5f,transform.position.z);
+                                spikesInstance = Instantiate(spikesPrefab, spikesSpawnPoint,transform.rotation);
                                 hasSpikes = true;
                             }
                             break;
                         case BoxState.RiseOnStep:
                             if (!isRising)
                             {
-                                collision.transform.SetParent(transform);
                                 riseStartTime = Time.time;
                                 isRising = true;
-                                Invoke("Reset", delayBeforeReset);
                             }
                             break;
                     }
@@ -147,11 +143,11 @@ public class BoxController : MonoBehaviour
                 {
                     TouchSide?.Invoke();
                     Debug.Log("玩�?�接触�?�子侧面");
-                    ifCanBeHold = true;
+                    ifCanBeHold=true;
                     return;
                 }
             }
-
+            
         }
     }
 
@@ -159,13 +155,12 @@ public class BoxController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (currentState == BoxState.RiseOnStep && isRising == false) { collision.transform.SetParent(null); }
             if (!HasBeenHold)
             {
                 ifCanBeHold = false;
                 Debug.Log("玩�?��?�开箱子，无法再拾取");
             }
-
+            
             foreach (ContactPoint2D contact in collision.contacts)
             {
                 Vector3 normal = contact.normal;
@@ -198,20 +193,15 @@ public class BoxController : MonoBehaviour
     }
     public void SetState(BoxState state)
     {
-        if (currentState == BoxState.SpikesOnStep)
+        if(currentState == BoxState.SpikesOnStep) 
         {
-            if (hasSpikes)
+            if (hasSpikes) 
             {
                 Destroy(spikesInstance);
                 hasSpikes = false;
             }
         }
         currentState = state;
-    }
-    private void Reset()
-    {
-        Debug.Log("Reset");
-        transform.position = InitialPosition;
     }
     /*private IEnumerator ResetBoxStateAfterDelay2()
     {

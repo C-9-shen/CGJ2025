@@ -5,7 +5,6 @@ using UnityEngine;
 using System;
 using JetBrains.Annotations;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,9 +15,7 @@ public class GameManager : MonoBehaviour
 
     public static bool DirectlyFallen = false;
 
-    public List<GMEvent> NotFallEvents = new List<GMEvent>();
-
-    public List<GMEvent> DisobeyFinalEvents = new List<GMEvent>();
+    public List<NotFallEvent> NotFallEvents = new List<NotFallEvent>();
 
     // MessageBox 标志位常量
     private const uint MB_OK = 0x00000000;
@@ -96,33 +93,10 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    public void DisobeyFinalEvent()
-    {
-        if (Disobey >= 3)
-        {
-            foreach (var item in DisobeyFinalEvents)
-            {
-                if (item.EventIndex != -1)
-                {
-                    if (item.TriggerOnce == false || item.Triggered == false)
-                    {
-                        item.Triggered = true;
-                        item.TriggerEvent.Invoke();
-                    }
-                }
-            }
-        }
-    }
-
-    public void SwitchScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
 }
 
 [Serializable]
-public class GMEvent
+public class NotFallEvent
 {
     public int EventIndex = -1;
     public bool TriggerOnce = false;
