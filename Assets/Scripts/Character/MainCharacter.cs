@@ -52,6 +52,8 @@ public class MainCharacter : MonoBehaviour
     protected bool isDead = false;
     protected Transform RespawnPos;
 
+    public GameObject GameManagertemp;
+
     public CharacterStats Stats
     {
         get => stats;
@@ -84,7 +86,7 @@ public class MainCharacter : MonoBehaviour
 
     void Start()
     {
-        
+        GameManagertemp = GameObject.FindGameObjectWithTag("GM");
     }
     protected void ApplyStats()
     {
@@ -229,11 +231,11 @@ public class MainCharacter : MonoBehaviour
         animator.SetFloat("SpeedY", rb.velocity.y);
         animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         animator.SetBool("IsGround", isGrounded);
-        
+
         // 更新检测
         UpdateGroundCheck();
         UpdateSideCheck();
-        
+
         // 只在角色未死亡且输入启用时处理输入
         if (!isDead && GameManager.InputEnabled)
         {
@@ -249,6 +251,24 @@ public class MainCharacter : MonoBehaviour
             // 输入被禁用时，停止移动
             horizontalInput = 0;
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            GameManagertemp.GetComponent<GameManager>().SwitchScene("Tutorial");
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            GameManagertemp.GetComponent<GameManager>().SwitchScene("Interior");
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        { 
+            GameManagertemp.GetComponent<GameManager>().SwitchScene("Chase");
         }
     }
 

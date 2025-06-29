@@ -290,6 +290,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!1 &64495125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64495126}
+  - component: {fileID: 64495127}
+  m_Layer: 5
+  m_Name: Music Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &64495126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64495125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1716777024}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64495127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64495125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd35bfc13fd9a64bb0e667e962da565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicPlaylist:
+  - {fileID: 8300000, guid: 5e8b929034383474b82a74f065dab879, type: 3}
+  - {fileID: 8300000, guid: 2d893a4289dea7449978eabf74b28007, type: 3}
+  loopCount: 0
+  playOnStart: 1
+  shuffleMode: 0
+  musicVolume: 1
+  fadeInOut: 1
+  fadeDuration: 1
+  showDebugInfo: 1
 --- !u!1 &81951189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,7 +3808,7 @@ GameObject:
   - component: {fileID: 466538121}
   m_Layer: 5
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3895,6 +3949,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Tri
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1181857556}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Tri
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!1 &467077109
 GameObject:
@@ -9105,6 +9171,104 @@ Transform:
   - {fileID: 1934733361}
   m_Father: {fileID: 1716777024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1106304450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1716777024}
+    m_Modifications:
+    - target: {fileID: 462456312177524790, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_Name
+      value: General Trigger Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].TriggerOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 64495127}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextTrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MusicManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504725472384235534, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: TriggerEvents.Array.data[0].triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+--- !u!4 &1106304451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6447074876061278479, guid: 43db54d79c897c44585e0edaad9e7800, type: 3}
+  m_PrefabInstance: {fileID: 1106304450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106664039
 GameObject:
   m_ObjectHideFlags: 0
@@ -9450,7 +9614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1181857557
 Transform:
   m_ObjectHideFlags: 0
@@ -13098,6 +13262,8 @@ Transform:
   - {fileID: 1510910126}
   - {fileID: 1490580069}
   - {fileID: 419889899}
+  - {fileID: 64495126}
+  - {fileID: 1106304451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1716777025

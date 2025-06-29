@@ -244,7 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   stats:
-    moveSpeed: 600
+    moveSpeed: 900
     jumpForce: 1900
     maxJumps: 1
     gravityScale: 800
@@ -257,6 +257,7 @@ MonoBehaviour:
   sideCheckHeight: 0.8
   sideRaycastCount: 3
   isGrounded: 0
+  GameManagertemp: {fileID: 0}
 --- !u!95 &3517770135062436248
 Animator:
   serializedVersion: 5
