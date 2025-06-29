@@ -226,7 +226,7 @@ MonoBehaviour:
   currentState: 1
   riseHeight: 0.01
   riseDuration: 2
-  spikesPrefab: {fileID: 0}
+  spikesPrefab: {fileID: 3149317623673920116, guid: 79160bac7c8d4bc4796e6bee9ac83e7b, type: 3}
   spikesSpawnPoint: {x: 0, y: 0, z: 0}
   topThreshold: 0.7
   sideThreshold: 0.5
