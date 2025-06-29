@@ -1711,12 +1711,40 @@ PrefabInstance:
       value: 60.9
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 60.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -2610,16 +2638,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -3881,16 +3937,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -4843,6 +4927,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   impactStrength: 100
   dampingRatio: 0.8
+  shakeAudioClip: {fileID: 0}
+  audioVolume: 1
+  playAudioOnShake: 1
   OnShakeStart:
     m_PersistentCalls:
       m_Calls:
@@ -4916,16 +5003,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -6387,16 +6502,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -12636,16 +12779,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -12752,16 +12923,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -15791,9 +15990,37 @@ PrefabInstance:
       propertyPath: m_text
       value: Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -17917,16 +18144,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -19493,9 +19748,37 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 42
       objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -20280,6 +20563,18 @@ PrefabInstance:
       propertyPath: m_text
       value: This trigger can actually works!
       objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
@@ -20295,6 +20590,22 @@ PrefabInstance:
     - target: {fileID: 3114703429591197488, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -20784,16 +21095,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -21614,16 +21953,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -22357,9 +22724,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 509258609}
     m_Modifications:
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23117,12 +23512,40 @@ PrefabInstance:
       value: 89.21
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 89.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23229,16 +23652,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23345,16 +23796,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23471,16 +23950,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23587,16 +24094,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -23703,16 +24238,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -24669,16 +25232,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -25028,16 +25619,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
@@ -26031,16 +26650,44 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_fontSizeMax
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224114929566995324, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3033392543189765866, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Name
       value: TipWindow (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontSize
+      value: 111.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8838040943276466813, guid: cfad3fb96319f5d4a878b1239f2fc381, type: 2}
+    - target: {fileID: 3472648453955963337, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7712097172825853341, guid: 43a98f68ab510f14da4367241535ccaf, type: 3}
       propertyPath: m_Pivot.x
