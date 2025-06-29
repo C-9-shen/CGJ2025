@@ -2610,6 +2610,10 @@ PrefabInstance:
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6395624957611411541, guid: 6d4d94ad20c87eb41b59cab921c0c8cd, type: 3}
+      propertyPath: activeRange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395624957611411541, guid: 6d4d94ad20c87eb41b59cab921c0c8cd, type: 3}
       propertyPath: currentState
       value: 1
       objectReference: {fileID: 0}
