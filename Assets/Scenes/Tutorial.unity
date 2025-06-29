@@ -2501,6 +2501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419889899}
   - component: {fileID: 419889900}
+  - component: {fileID: 419889901}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2576,6 +2577,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!114 &419889901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419889898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd15792f1badc4d4c94e15a2c598bc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuUI: {fileID: 419889898}
+  hideOnAnyKey: 1
+  disableInputWhenActive: 1
+  enableDebugLog: 1
 --- !u!1001 &427446203
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interior.unity
     guid: e2a5fb159cbf11b48a0274c400fc7aef
+  - enabled: 1
+    path: Assets/Scenes/Chase.unity
+    guid: aa6e4d1d342d12e429394600d2a99e38
   m_configObjects: {}
