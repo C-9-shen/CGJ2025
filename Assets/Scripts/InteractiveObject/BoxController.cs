@@ -22,7 +22,7 @@ public class BoxController : MonoBehaviour
     public Vector3 spikesSpawnPoint;
     private GameObject spikesInstance;
     private Rigidbody2D rb; 
-    private bool isRising = false;
+    public bool isRising = false;
     //private bool isFalling = false;
     private float riseStartTime;
     //private float fallStartTime;
@@ -60,13 +60,14 @@ public class BoxController : MonoBehaviour
             if (elapsedTime < riseDuration)
             {
                 float fractionComplete = elapsedTime / riseDuration;
-                transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight*fractionComplete, transform.position.z);
+                transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight * fractionComplete, transform.position.z);
             }
             else
             {
                 transform.position = new Vector3(transform.position.x, InitialPosition.y + riseHeight, transform.position.z);
                 isRising = false;
             }
+            Debug.Log(transform.position);
         }
         
         /*if (currentState == BoxState.RiseOnStep && isFalling)
@@ -124,14 +125,16 @@ public class BoxController : MonoBehaviour
                         case BoxState.SpikesOnStep:
                             if (!hasSpikes)
                             {
-                                spikesSpawnPoint = new Vector3(transform.position.x,transform.position.y+0.5f,transform.position.z);
-                                spikesInstance = Instantiate(spikesPrefab, spikesSpawnPoint,transform.rotation);
+                                spikesInstance = Instantiate(spikesPrefab, transform);
+                                spikesInstance.transform.localPosition = new Vector3(0, 1, 0);
+                                spikesInstance.transform.localScale = Vector3.one;
                                 hasSpikes = true;
                             }
                             break;
                         case BoxState.RiseOnStep:
                             if (!isRising)
                             {
+                                collision.transform.SetParent(transform);
                                 riseStartTime = Time.time;
                                 isRising = true;
                             }
@@ -155,6 +158,7 @@ public class BoxController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (currentState == BoxState.RiseOnStep&&isRising==false) {collision.transform.SetParent(null); }
             if (!HasBeenHold)
             {
                 ifCanBeHold = false;
