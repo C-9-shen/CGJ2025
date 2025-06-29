@@ -59,9 +59,10 @@ public class ButtonController : MonoBehaviour
                         isOpen = !isOpen;
                         break;
                     case SwitchState.OpenThenClose:
-                        if (targetObject != null)targetObject.isOpen = true;
+                        if (targetObject != null)
                         isOpen = true;
                         timer = 0f;
+                        ButtonOpen?.Invoke();
                         break;
                     case SwitchState.AutoOpen:
                         // No action needed for AutoOpen state
@@ -82,8 +83,8 @@ public class ButtonController : MonoBehaviour
                         if (timer >= autoCloseDelay)
                         {
                             isOpen = false;
-                            targetObject.isOpen = false;
                             timer = 0f;
+                            ButtonClose?.Invoke();
                         }
                     }
                     break;
@@ -102,6 +103,7 @@ public class ButtonController : MonoBehaviour
                     {
                         isOpen = false;
                         timer = 0f;
+                        ButtonClose?.Invoke();
                     }
                 }
             }
